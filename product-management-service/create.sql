@@ -1,0 +1,18 @@
+create table category (cat_id integer not null, cat_name varchar(255), user_id varchar(255) not null, primary key (cat_id)) engine=InnoDB;
+create table product (prod_id integer not null, prod_name varchar(255), user_id varchar(255) not null, category_cat_id integer, primary key (prod_id)) engine=InnoDB;
+alter table product add constraint FKifw9ap0fjsg08c37bwbk6n1na foreign key (category_cat_id) references category (cat_id);
+create table category (cat_id integer not null, cat_name varchar(255), user_id varchar(255) not null, primary key (cat_id)) engine=InnoDB;
+create table product (prod_id integer not null, prod_name varchar(255), user_id varchar(255) not null, category_cat_id integer, primary key (prod_id)) engine=InnoDB;
+alter table product add constraint FKifw9ap0fjsg08c37bwbk6n1na foreign key (category_cat_id) references category (cat_id);
+create table category (cat_id integer not null, cat_name varchar(255), user_id varchar(255) not null, primary key (cat_id)) engine=InnoDB;
+create table product (prod_id integer not null, prod_name varchar(255), user_id varchar(255) not null, cat_id integer, primary key (prod_id)) engine=InnoDB;
+alter table product add constraint FK5yhiu7ri51c4oigkb28skv0b2 foreign key (cat_id) references category (cat_id);
+create table category (cat_id integer not null, cat_name varchar(255), primary key (cat_id)) engine=InnoDB;
+create table product (prod_id integer not null, prod_name varchar(255), cat_id integer, primary key (prod_id)) engine=InnoDB;
+alter table product add constraint FK5yhiu7ri51c4oigkb28skv0b2 foreign key (cat_id) references category (cat_id);
+create table category (cat_id integer not null, cat_name varchar(255), primary key (cat_id)) engine=InnoDB;
+create table product (prod_id integer not null, prod_name varchar(255), cat_id integer, primary key (prod_id)) engine=InnoDB;
+alter table product add constraint FK5yhiu7ri51c4oigkb28skv0b2 foreign key (cat_id) references category (cat_id);
+create table category (cat_id integer not null, cat_name varchar(255), primary key (cat_id)) engine=InnoDB;
+create table product (prod_id integer not null, prod_name varchar(255), cat_id integer, primary key (prod_id)) engine=InnoDB;
+alter table product add constraint FK5yhiu7ri51c4oigkb28skv0b2 foreign key (cat_id) references category (cat_id);
